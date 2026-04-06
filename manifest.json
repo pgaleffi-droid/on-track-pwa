@@ -1,0 +1,49 @@
+{
+  "name": "ON TRACK — Talenti e Resilienza, Alleanze per la Crescita",
+  "short_name": "ON TRACK",
+  "description": "Progetto FSE+ per la riattivazione di giovani NEET a Milano e hinterland. Fondazione Piazza dei Mestieri ETS.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1628",
+  "theme_color": "#0A1628",
+  "orientation": "portrait-primary",
+  "lang": "it",
+  "categories": ["education", "social"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homepage ON TRACK"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Il Progetto",
+      "short_name": "Progetto",
+      "description": "Struttura e fasi operative",
+      "url": "/?page=progetto"
+    },
+    {
+      "name": "Partner",
+      "short_name": "Partner",
+      "description": "Le 7 organizzazioni del partenariato",
+      "url": "/?page=partner"
+    }
+  ]
+}
