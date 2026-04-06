@@ -834,13 +834,6 @@
 </head>
 <body>
 
-<!-- SPLASH -->
-<div id="splash">
-  <div class="splash-logo">ON<br><span>TRACK</span></div>
-  <p class="splash-sub">Talenti e Resilienza,<br>Alleanze per la Crescita</p>
-  <div class="splash-bar"><div class="splash-progress"></div></div>
-  <p class="splash-eu">Co-finanziato dall'Unione Europea<br>PR FSE+ Regione Lombardia 2021–2027</p>
-</div>
 
 <!-- INSTALL BANNER -->
 <div id="install-banner">
@@ -1305,15 +1298,6 @@
 </div>
 
 <script>
-// ── SPLASH ──
-function hideSplash() {
-  var s = document.getElementById('splash');
-  if (!s) return;
-  s.classList.add('hide');
-  setTimeout(function() { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
-}
-setTimeout(hideSplash, 1800);
-window.addEventListener('load', function() { setTimeout(hideSplash, 400); });
 
 // ── NAVIGATION ──
 const navBtns = document.querySelectorAll('.nav-btn');
