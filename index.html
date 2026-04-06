@@ -11,8 +11,6 @@
 <title>ON TRACK — Talenti e Resilienza</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0A1628;
@@ -28,6 +26,8 @@
     --text-muted: rgba(245,240,232,0.55);
     --radius: 20px;
     --radius-sm: 12px;
+    --font-display: 'Arial Black', 'Arial Bold', Impact, sans-serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bottom: env(safe-area-inset-bottom, 0px);
   }
@@ -37,7 +37,7 @@
   html, body {
     height: 100%;
     overflow: hidden;
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-body);
     background: var(--navy);
     color: var(--cream);
   }
@@ -103,7 +103,7 @@
   .nav-btn.active { color: var(--orange); }
   .nav-btn svg { width: 22px; height: 22px; }
   .nav-btn span {
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-body);
     font-size: 10px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -180,7 +180,7 @@
   }
 
   .hero-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 62px;
     font-weight: 800;
     line-height: 0.9;
@@ -240,7 +240,7 @@
     text-align: center;
   }
   .kpi-card .kpi-num {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 38px;
     font-weight: 800;
     color: var(--white);
@@ -260,7 +260,7 @@
 
   /* SECTION LABELS */
   .section-label {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 2.5px;
@@ -341,7 +341,7 @@
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
   .page-header h2 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 36px;
     font-weight: 800;
     letter-spacing: -0.5px;
@@ -378,7 +378,7 @@
     box-shadow: 0 0 0 3px rgba(232,93,38,0.3);
   }
   .phase-num {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -387,7 +387,7 @@
     margin-bottom: 4px;
   }
   .phase-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 22px;
     font-weight: 700;
     color: var(--white);
@@ -436,7 +436,7 @@
     margin-bottom: 6px;
   }
   .info-tile .value {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 20px;
     font-weight: 700;
     color: var(--white);
@@ -444,7 +444,7 @@
   }
   .info-tile .value small {
     display: block;
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-body);
     font-size: 11px;
     font-weight: 400;
     color: var(--text-muted);
@@ -481,7 +481,7 @@
   }
   .partner-info { flex: 1; }
   .partner-name {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 18px;
     font-weight: 700;
     color: var(--white);
@@ -512,7 +512,7 @@
     flex-shrink: 0;
   }
   .partner-budget .amt {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 16px;
     font-weight: 700;
     color: var(--white);
@@ -587,7 +587,7 @@
   }
   .stat-bar-label { font-size: 13px; font-weight: 500; color: var(--cream); }
   .stat-bar-value {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 18px;
     font-weight: 700;
     color: var(--white);
@@ -628,7 +628,7 @@
     border-radius: 50%;
   }
   .contact-hero h3 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 28px;
     font-weight: 800;
     color: var(--white);
@@ -737,7 +737,7 @@
     transform: scale(1.05);
   }
   .splash-logo {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     font-size: 80px;
     font-weight: 800;
     color: var(--white);
@@ -819,7 +819,7 @@
     font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
-    font-family: 'DM Sans', sans-serif;
+    font-family: var(--font-body);
   }
   #dismiss-btn {
     background: none;
