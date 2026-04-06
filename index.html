@@ -1306,10 +1306,14 @@
 
 <script>
 // ── SPLASH ──
-setTimeout(() => {
-  document.getElementById('splash').classList.add('hide');
-  setTimeout(() => document.getElementById('splash').remove(), 600);
-}, 2000);
+function hideSplash() {
+  var s = document.getElementById('splash');
+  if (!s) return;
+  s.classList.add('hide');
+  setTimeout(function() { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
+}
+setTimeout(hideSplash, 1800);
+window.addEventListener('load', function() { setTimeout(hideSplash, 400); });
 
 // ── NAVIGATION ──
 const navBtns = document.querySelectorAll('.nav-btn');
