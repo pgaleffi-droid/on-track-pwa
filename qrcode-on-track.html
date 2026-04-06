@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code — ON TRACK</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 24px;
+  }
+  .card {
+    background: #ffffff;
+    border: 2px solid #0A1628;
+    border-radius: 16px;
+    padding: 32px 36px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  }
+  .title {
+    font-family: 'Arial Black', Impact, sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: #0A1628;
+    line-height: 0.88;
+    letter-spacing: -1px;
+    margin-bottom: 6px;
+  }
+  .title span { color: #E85D26; }
+  .subtitle {
+    font-size: 11px;
+    color: #777;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 22px;
+  }
+  #qrcode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  #qrcode canvas {
+    border: 4px solid #0A1628;
+    border-radius: 8px;
+    display: block;
+  }
+  .url {
+    font-size: 9px;
+    color: #aaa;
+    word-break: break-all;
+    margin-bottom: 16px;
+    letter-spacing: 0.2px;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 14px 0;
+  }
+  .funder-row {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  .funder-badge {
+    font-size: 9px;
+    color: #888;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 3px 10px;
+  }
+  .istruzioni {
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 14px 18px;
+    width: 300px;
+    font-size: 12px;
+    color: #555;
+    line-height: 1.7;
+  }
+  .istruzioni strong { color: #0A1628; }
+  @media print {
+    body { background: white; padding: 0; justify-content: flex-start; }
+    .istruzioni { display: none; }
+    .card { box-shadow: none; margin: 40px auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="title">ON<br><span>TRACK</span></div>
+  <div class="subtitle">Talenti e Resilienza,<br>Alleanze per la Crescita</div>
+  <div id="qrcode"></div>
+  <div class="url">pgaleffi-droid.github.io/on-track-pwa</div>
+  <hr class="divider">
+  <div class="funder-row">
+    <span class="funder-badge">🇪🇺 Unione Europea · Regione Lombardia</span>
+    <span class="funder-badge">PR FSE+ 2021–2027 · Bando ZeroNEET</span>
+  </div>
+</div>
+
+<div class="istruzioni">
+  <strong>Come salvare o stampare:</strong><br>
+  1. Premi <strong>Ctrl+P</strong> (Windows) o <strong>Cmd+P</strong> (Mac)<br>
+  2. Destinazione → <strong>Salva come PDF</strong><br>
+  3. Oppure scegli la tua stampante e stampa
+</div>
+
+<script>
+  new QRCode(document.getElementById("qrcode"), {
+    text: "https://pgaleffi-droid.github.io/on-track-pwa",
+    width: 210,
+    height: 210,
+    colorDark: "#0A1628",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
+</body>
+</html>
